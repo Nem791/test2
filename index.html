@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Link shortener</h2>
+        <div class="enter-link">
+            <div class="enter-a-link">Enter a link: </div>
+            <div class="input">
+                <input class="user-input" type="url" placeholder="Enter a Link" required>
+                <button class="submit">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="domain">
+            <span class="short-domain">Short domain: </span>
+            <button class="btns" data-link="short_link">shrtco.de</button>
+            <button class="btns" data-link="short_link2">9qr.de</button>
+            <button class="btns" data-link="short_link3">shiny.link</button>
+        </div>
+        <div class="credits">
+            Get the long link of a shortened link and much more. Requires a `code` parameter containing a shrtcode code.
+            The code is the last part of a short link. Example short link: shrtco.de/example -> Code: "example"
+        </div>
+        <div class="result">
+            <div id="result">
+                Link rút gọn: <span id="final-link"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./index.js"></script>
+<script src="./fetchAPI.js"></script>
+
+</html>
